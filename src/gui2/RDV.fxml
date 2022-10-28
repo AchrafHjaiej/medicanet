@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="scene1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1100.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui2.RDVController">
+   <children>
+      <AnchorPane layoutY="-4.0" prefHeight="869.0" prefWidth="308.0" style="-fx-background-color: #009688;">
+         <children>
+            <ImageView fx:id="idImg" fitHeight="176.0" fitWidth="212.0" layoutX="65.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../img/313201253_524356605814330_2129158229641979389_n.png" />
+               </image>
+            </ImageView>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="-2.0" layoutY="221.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="310.0" style="-fx-background-color: #009688;" text="COMPTE" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="-2.0" layoutY="293.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="310.0" style="-fx-background-color: #009688;" text="RENDEZ-VOUS" textFill="WHITE">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="-2.0" layoutY="365.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="310.0" style="-fx-background-color: #009688;" text="RECLAMATION" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="-2.0" layoutY="437.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="310.0" style="-fx-background-color: #009688;" text="SETTINGS" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <BorderPane layoutX="309.0" layoutY="3.0" prefHeight="850.0" prefWidth="794.0">
+         <top>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="label1" prefHeight="103.0" prefWidth="789.0" text="LISTE DES MEDECINS " textFill="#009688">
+                     <font>
+                        <Font name="Georgia" size="35.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ScrollPane prefHeight="749.0" prefWidth="794.0" VBox.vgrow="ALWAYS">
+                     <content>
+                        <GridPane fx:id="cardGrid">
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="511.0" prefWidth="767.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AjouterReclamationController">
+   <children>
+      <AnchorPane fx:id="interfaceAjoutREC" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="878.0" prefWidth="1400.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Label fx:id="descLabel" layoutX="370.0" layoutY="125.0" text="Description de la réclamation  " AnchorPane.bottomAnchor="713.0" AnchorPane.rightAnchor="775.0">
+               <font>
+                  <Font name="Candara" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="AjouterReclamation" layoutX="1199.0" layoutY="203.0" mnemonicParsing="false" onAction="#AjouterReclamation" prefHeight="66.0" prefWidth="155.0" style="-fx-background-color: #009688; -fx-background-radius: 30;" text="Ajouter" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="609.0" AnchorPane.leftAnchor="1199.0">
+               <font>
+                  <Font name="SansSerif Regular" size="20.0" />
+               </font>
+            </Button>
+            <Label fx:id="ObjetLabel" layoutX="844.0" layoutY="140.0" prefHeight="26.0" prefWidth="167.0" text="Objet Réclamation" textFill="#0d0d0d" AnchorPane.bottomAnchor="712.0" AnchorPane.rightAnchor="389.0">
+               <font>
+                  <Font name="Candara" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="TextObjetRec" layoutX="844.0" layoutY="190.0" prefHeight="95.0" prefWidth="269.0" AnchorPane.bottomAnchor="593.0" AnchorPane.rightAnchor="287.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label fx:id="titreREC" layoutX="670.0" layoutY="52.0" prefHeight="46.0" prefWidth="349.0" text="RECLAMATION" textFill="#009688" AnchorPane.leftAnchor="670.0" AnchorPane.topAnchor="52.0">
+               <font>
+                  <Font name="Georgia" size="40.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="TextDescriptionREC" layoutX="367.0" layoutY="173.0" prefHeight="95.0" prefWidth="361.0" AnchorPane.bottomAnchor="595.0" AnchorPane.rightAnchor="672.0">
+               <font>
+                  <Font size="15.0" />
+               </font></TextArea>
+            <TableView fx:id="Table_View" layoutX="367.0" layoutY="413.0" onMouseClicked="#GetListRec" onSort="#Table_View" prefHeight="332.0" prefWidth="996.0">
+               <columns>
+                  <TableColumn fx:id="columnDescriptionRec" prefWidth="228.0" text="Description Réclamation " />
+                  <TableColumn fx:id="columnTypeRec" minWidth="8.79998779296875" prefWidth="230.0" text="Type Réclamation" />
+                  <TableColumn fx:id="columnObjetRec" minWidth="0.0" prefWidth="376.0" text="Objet Réclamation" />
+                  <TableColumn fx:id="Date" prefWidth="161.0" text="Date" />
+               </columns>
+            </TableView>
+            <TextField fx:id="recherche" layoutX="370.0" layoutY="333.0" onKeyPressed="#recherche" prefHeight="46.0" prefWidth="269.0" />
+            <ImageView fx:id="imgRecherche" fitHeight="34.0" fitWidth="35.0" layoutX="670.0" layoutY="337.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/rechercher%20(1).png" />
+               </image>
+            </ImageView>
+            <Button fx:id="supprimerRec" layoutX="583.0" layoutY="770.0" mnemonicParsing="false" onAction="#supprimerRec" prefHeight="66.0" prefWidth="155.0" style="-fx-background-color: #009688; -fx-background-radius: 30;" text="Supprimer" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="modifierRec" layoutX="370.0" layoutY="770.0" mnemonicParsing="false" onAction="#modifierRec" prefHeight="66.0" prefWidth="155.0" style="-fx-background-color: #009688; -fx-background-radius: 30;" text="Modifier" textFill="#fafafa">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="textIDREC" layoutX="1378.0" layoutY="425.0" visible="false" />
+            <Button fx:id="RecupererREC" layoutX="807.0" layoutY="770.0" mnemonicParsing="false" onAction="#RecupererREC" prefHeight="66.0" prefWidth="155.0" style="-fx-background-color: #009688; -fx-background-radius: 30;" text="Recupérer" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="26.0" fitWidth="20.0" layoutX="1206.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/ajouter-un-bouton.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="592.0" layoutY="793.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/supprimer.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="380.0" layoutY="793.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/bouton-modifier.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="20.0" layoutX="813.0" layoutY="793.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/recuperation%20(1).png" />
+               </image>
+            </ImageView>
+            <Button fx:id="TéléchargerPDF" layoutX="1069.0" layoutY="770.0" mnemonicParsing="false" onAction="#TéléchargerPDF" prefHeight="66.0" prefWidth="209.0" style="-fx-background-color: #; -fx-background-radius: 30;" text="Télécharger PDF" textAlignment="CENTER" textFill="#e10909">
+               <font>
+                  <Font name="SansSerif Regular" size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="878.0" prefWidth="308.0" style="-fx-background-color: #009688;">
+         <children>
+            <ImageView fitHeight="223.0" fitWidth="284.0" layoutX="44.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../MEDICANET.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="Compte" alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="-1.0" layoutY="289.0" mnemonicParsing="false" onAction="#Compte" prefHeight="72.0" prefWidth="310.0" style="-fx-background-color: #00322D;" text="COMPTE" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="RDV" alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="-1.0" layoutY="361.0" mnemonicParsing="false" onAction="#RDV" prefHeight="72.0" prefWidth="310.0" style="-fx-background-color: #009688;" text="RENDEZ-VOUS" textFill="WHITE">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="REC" alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="-1.0" layoutY="433.0" mnemonicParsing="false" onAction="#REC" onMouseClicked="#GetReclamationView" prefHeight="72.0" prefWidth="310.0" style="-fx-background-color: #009688;" text="RECLAMATION" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="ART" alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="-1.0" layoutY="505.0" mnemonicParsing="false" onAction="#ART" prefHeight="72.0" prefWidth="310.0" style="-fx-background-color: #009688;" text="ARTICLE" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutY="217.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="310.0" style="-fx-background-color: #009688;" text="ACCEUIL" textFill="WHITE">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="-2.0" layoutY="566.0" mnemonicParsing="false" onAction="#LOGOUTbntCLICKED" prefHeight="72.0" prefWidth="310.0" style="-fx-background-color: #009688;" text="LOG OUT" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="retour" layoutX="68.0" layoutY="778.0" mnemonicParsing="false" onAction="#retour" prefHeight="46.0" prefWidth="136.0" style="-fx-background-color: #F0FFFF; -fx-background-radius: 30;" text="Retour">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

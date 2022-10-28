@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="scene1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1100.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.projet_sante.gui.EspaceMedecinController">
+   <children>
+      <Label fx:id="label1" layoutX="498.0" layoutY="25.0" prefHeight="46.0" prefWidth="414.0" text="ESPACE MEDECIN" textFill="#009688">
+         <font>
+            <Font name="Georgia" size="35.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutY="-4.0" prefHeight="869.0" prefWidth="308.0" style="-fx-background-color: #009688;">
+         <children>
+            <ImageView fx:id="idImg" fitHeight="176.0" fitWidth="212.0" layoutX="65.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../img/313201253_524356605814330_2129158229641979389_n.png" />
+               </image>
+            </ImageView>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="-2.0" layoutY="221.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="310.0" style="-fx-background-color: #009688;" text="COMPTE" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="-2.0" layoutY="293.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="310.0" style="-fx-background-color: #009688;" text="RENDEZ-VOUS" textFill="WHITE">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="-2.0" layoutY="365.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="310.0" style="-fx-background-color: #009688;" text="RECLAMATION" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="-2.0" layoutY="437.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="310.0" style="-fx-background-color: #009688;" text="SETTINGS" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <HBox layoutX="318.0" layoutY="254.0" prefHeight="341.0" prefWidth="774.0">
+         <children>
+            <TableView fx:id="espT1" prefHeight="342.0" prefWidth="362.0">
+              <columns>
+                <TableColumn fx:id="espC1" prefWidth="179.19998168945312" text="Heure Rendez-vous" />
+                <TableColumn fx:id="espC2" prefWidth="180.0" text="Date Rendez-vous" />
+              </columns>
+            </TableView>
+            <TableView fx:id="espT2" prefHeight="342.0" prefWidth="413.0">
+              <columns>
+                <TableColumn fx:id="espC3" prefWidth="414.40001220703124" text="Categorie" />
+              </columns>
+            </TableView>
+         </children>
+      </HBox>
+      <Button fx:id="buttonUpdate1" layoutX="612.0" layoutY="628.0" mnemonicParsing="false" onAction="#testUpdate" prefHeight="38.0" prefWidth="186.0" style="-fx-background-radius: 30; -fx-background-color: #009688;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonAnnul1" layoutX="316.0" layoutY="628.0" mnemonicParsing="false" onAction="#testAnnul" prefHeight="43.0" prefWidth="258.0" style="-fx-background-radius: 30; -fx-background-color: #009688;" text="Annuler rendez-vous" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="24.0" />
+         </font>
+      </Button>
+      <Label layoutX="318.0" layoutY="117.0" text="Reporter Heure du Rendez-vous:" />
+      <Label layoutX="318.0" layoutY="176.0" text="Reporter Date du Rendez-vous:" />
+      <DatePicker fx:id="idDate" layoutX="521.0" layoutY="172.0" />
+      <TextField fx:id="idHeure" layoutX="521.0" layoutY="113.0" />
+      <Label layoutX="778.0" layoutY="117.0" text="Affecter une Categorie :" />
+      <ComboBox fx:id="idCat" layoutX="912.0" layoutY="113.0" prefWidth="150.0" />
+      <Button fx:id="buttonAffect11" layoutX="827.0" layoutY="628.0" mnemonicParsing="false" onAction="#testAffect" prefHeight="43.0" prefWidth="258.0" style="-fx-background-radius: 30; -fx-background-color: #009688;" text="Affecter categorie" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="24.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

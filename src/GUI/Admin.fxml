@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#re" prefHeight="872.0" prefWidth="1400.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AdminController">
+   <children>
+      <Label layoutX="598.0" layoutY="60.0" text="Liste Des Réclamations " textFill="#009688">
+         <font>
+            <Font name="Georgia" size="35.0" />
+         </font>
+      </Label>
+      <TableView fx:id="Table_ViewAdmin" layoutX="330.0" layoutY="145.0" onMouseClicked="#TableViewAdmin" prefHeight="532.0" prefWidth="1055.0">
+        <columns>
+            <TableColumn fx:id="Username" prefWidth="130.40008544921875" text="Username" />
+            <TableColumn fx:id="Email" minWidth="0.0" prefWidth="137.60009765625" text="Email" />
+            <TableColumn fx:id="description" prefWidth="150.4000244140625" text="Description" />
+            <TableColumn fx:id="objetREC" prefWidth="148.79998779296875" text="Objet Réclamation" />
+            <TableColumn fx:id="Type_Rec" prefWidth="150.40008544921875" text="Type_réclamation" />
+            <TableColumn fx:id="ETAT" minWidth="0.0" prefWidth="179.99993896484375" text="État Réclamation" />
+            <TableColumn fx:id="date" prefWidth="184.0" text="Date " />
+        </columns>
+      </TableView>
+      <Label layoutX="801.0" layoutY="107.0" />
+      <TextField fx:id="rech" layoutX="1194.0" layoutY="75.0" prefHeight="32.0" prefWidth="173.0" />
+      <Button fx:id="supprimerRec" layoutX="347.0" layoutY="728.0" mnemonicParsing="false" onAction="#supprimerRec" prefHeight="52.0" prefWidth="147.0" style="-fx-background-color: #009688; -fx-background-radius: 30;" text="Supprimer" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="repondre" layoutX="525.0" layoutY="728.0" mnemonicParsing="false" onAction="#Repondre" prefHeight="52.0" prefWidth="147.0" style="-fx-background-color: #009688; -fx-background-radius: 30;" text="Répondre" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="1138.0" layoutY="75.0" mnemonicParsing="false" onAction="#Rechercher" prefHeight="32.0" prefWidth="40.0" />
+      <AnchorPane layoutY="-4.0" prefHeight="878.0" prefWidth="313.0" style="-fx-background-color: #AA0000;">
+         <children>
+            <Button fx:id="Compte" alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutY="323.0" mnemonicParsing="false" onAction="#Compte" prefHeight="72.0" prefWidth="310.0" style="-fx-background-color: #AA0000;" text="COMPTE" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="RDV" alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutY="395.0" mnemonicParsing="false" onAction="#RDV" prefHeight="72.0" prefWidth="310.0" style="-fx-background-color: #AA0000;" text="RENDEZ-VOUS" textFill="WHITE">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="ADMINRECCCC" alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutY="467.0" mnemonicParsing="false" onAction="#RECADMIN" prefHeight="72.0" prefWidth="310.0" style="-fx-background-color: #AA0000;" text="RECLAMATION" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="ART" alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutY="539.0" mnemonicParsing="false" onAction="#ART" prefHeight="72.0" prefWidth="310.0" style="-fx-background-color: #AA0000;" text="ARTICLE" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="LOG" alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="5.0" layoutY="611.0" mnemonicParsing="false" onAction="#btnLOGOUTClicked" prefHeight="72.0" prefWidth="310.0" style="-fx-background-color: #AA0000;" text="LOG OUT" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="231.0" fitWidth="239.0" layoutX="42.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@312632692_678298296842871_6789861531090047389_n-removebg-preview%20(2).png" />
+               </image>
+            </ImageView>
+            <Button fx:id="ACC" alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutY="251.0" mnemonicParsing="false" onAction="#btnACCEUIL" prefHeight="72.0" prefWidth="310.0" style="-fx-background-color: #AA0000;" text="ACCEUIL" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="backOf" layoutX="82.0" layoutY="733.0" mnemonicParsing="false" onAction="#backOf" prefHeight="52.0" prefWidth="147.0" style="-fx-background-color: #ffffff; -fx-background-radius: 60;" text="Back Of" textFill="#144331">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="rechercheimg" fitHeight="17.0" fitWidth="25.0" layoutX="1149.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@rechercher%20(1).png" />
+         </image>
+      </ImageView>
+      <Button fx:id="Suivant" layoutX="1172.0" layoutY="728.0" mnemonicParsing="false" onAction="#Suivant" prefHeight="52.0" prefWidth="147.0" style="-fx-background-color: #009688; -fx-background-radius: 30;" text="Suivant" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="Statistique" layoutX="728.0" layoutY="728.0" mnemonicParsing="false" onAction="#Statistique" prefHeight="52.0" prefWidth="147.0" style="-fx-background-color: #009688; -fx-background-radius: 30;" text="Statistique" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

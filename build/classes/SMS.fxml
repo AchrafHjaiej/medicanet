@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #99FF99;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SMSController">
+   <children>
+      <Label layoutX="128.0" layoutY="149.0" prefHeight="35.0" prefWidth="389.0" text="You Will recieve an SMS !">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="clicktorecieve" layoutX="271.0" layoutY="271.0" mnemonicParsing="false" onAction="#clicktoRecieve" text="Button" />
+   </children>
+</AnchorPane>

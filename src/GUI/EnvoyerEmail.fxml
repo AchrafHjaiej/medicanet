@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="680.0" style="-fx-background-color: #ffff; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.EnvoyerEmailController">
+   <children>
+      <AnchorPane prefHeight="58.0" prefWidth="680.0" style="-fx-background-color: #009688;">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="59.0" layoutX="29.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/message.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="114.0" layoutY="14.0" text="New Message" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="36.0" layoutY="88.0" text="To ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Line endX="494.199951171875" endY="9.999992370605469" layoutX="137.0" layoutY="118.0" startX="-101.0" startY="9.999992370605469" stroke="#c2b8b847" strokeWidth="2.0" />
+      <TextField fx:id="email" layoutX="125.0" layoutY="81.0" onAction="#email" opacity="0.35" prefHeight="36.0" prefWidth="474.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="36.0" layoutY="152.0" text="Subject">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Line endX="483.4000244140625" endY="61.600006103515625" layoutX="147.0" layoutY="128.0" startX="-110.20001220703125" startY="61.600006103515625" stroke="#c2b8b847" strokeWidth="2.0" />
+      <TextField fx:id="subject" layoutX="125.0" layoutY="138.0" onAction="#subject" opacity="0.35" prefHeight="43.0" prefWidth="474.0">
+         <font>
+            <Font size="20.0" />
+         </font></TextField>
+      <TextArea fx:id="message" layoutX="50.0" layoutY="199.0" opacity="0.19" prefHeight="227.0" prefWidth="566.0" style="-fx-background-color: #0000;">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextArea>
+      <Button fx:id="envoyer" layoutX="20.0" layoutY="458.0" mnemonicParsing="false" onAction="#envoyer" style="-fx-background-color: #009688; -fx-background-radius: 20;" text="Envoyer" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Line endX="502.4000244140625" endY="3.0517578125E-5" layoutX="136.0" layoutY="442.0" startX="-100.0" stroke="#c2b8b847" strokeWidth="2.0" />
+   </children>
+</AnchorPane>
